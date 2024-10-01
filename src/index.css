@@ -8,12 +8,23 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: black;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+[data-theme='light'] {
+  --bg-color: white;
+  --text-color: black;
+}
+
+[data-theme='dark'] {
+  --bg-color: black;
+  --text-color: rgba(255, 255, 255, 0.87);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
